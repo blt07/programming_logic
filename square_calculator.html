@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+// Faça um programa que entre com cinco números e imprima o quadrado de cada número.
+
+function jumpLine()
+{
+    document.write("<br" + "<br>");
+}
+
+function showMe(phrase)
+{
+    document.write(phrase);
+    jumpLine();
+}
+
+function readNumber(cont)
+{
+    var number = parseInt(prompt("Write the number " + cont + " :"));
+    return number;
+}
+
+var number;
+
+for (cont = 1; cont<=5; cont++)
+{
+    number = readNumber(cont);
+    showMe("<br>" + "The square of " + number + " is " + (number*number) + "<br>");
+}
+
+
+</script>
+
+

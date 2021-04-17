@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+
+<script>
+
+function jumpLine()
+{
+    document.write("<br>" + "<br>");
+}
+
+function showMe(phrase)
+{
+    document.write(phrase);
+    jumpLine();
+}
+
+function readNumber(phrase)
+{
+    var number = parseInt(prompt(phrase));
+    return number;
+}
+
+function sortyNumber(aux)
+{
+    sorty = Math.round(Math.random()*aux);
+    return sorty;
+}
+
+var aux = readNumber("Type it a number:");
+var number = readNumber("Type it a number between 0 and " + aux + "!");
+var sorty = sortyNumber(aux);
+
+if (number > sorty)
+{
+    showMe("You are wrong");
+    showMe("Your number is higher");
+}else {
+    if (number < sorty)
+{
+    showMe("You are wrong");
+    showMe("Your number is less");
+}else
+{
+    showMe("You are correct");
+}
+    
+}
+
+
+
+</script>

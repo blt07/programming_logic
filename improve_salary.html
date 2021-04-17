@@ -1,0 +1,102 @@
+<meta charset="UTF-8">
+
+<script>
+
+function showMe(phrase)
+{
+	document.write(phrase);
+	jumpLine();
+}
+
+function jumpLine()
+{
+	document.write("<br>" + "<br>");
+}
+
+function readNumber(name,phrase)
+{
+	switch(phrase){
+	case "salary":
+	
+	var number = parseInt(prompt("Nice " + name + " ! What's your " + phrase + " :"));
+	return number;
+	break;
+
+	case "tax":
+
+	var number = parseInt(prompt("Nice " + name + " ! What's your " + phrase + " :"));
+	return number;
+	break;
+
+	case "percentage":
+	do{
+	var number = parseInt(prompt("Which percentage to increase salary?"));
+	}while(number < 0);
+	return number;
+	break;
+}
+
+}
+
+function readName(name,phrase)
+{
+	if(name == "zero")
+{
+	var name = prompt("What's your " + phrase + " ?");
+	return name;
+}else
+{
+	var prof = prompt("Nice to meet you " + name + "! What's your " + phrase + " ?");
+	return prof;
+}
+}
+
+var name = readName("zero","name");
+var profession = readName(name, "profession");
+
+do{
+
+	var gross_Salary = readNumber(name,"salary");
+	var tax = readNumber(name,"tax");
+	if (tax >= gross_Salary)
+	{
+		alert("Your gross salary can't be greater than the tax!");
+	}
+
+}while (tax >= gross_Salary);
+
+document.write("=============================================");
+jumpLine();
+showMe("Employee: " + name);
+showMe("Office: " + profession);
+showMe("Gross Salary: $" + gross_Salary);
+showMe("Tax: $" + tax);
+showMe("Net salary: $" + (gross_Salary - tax));
+document.write("=============================================");
+jumpLine();
+
+var percentage = readNumber(name,"percentage")/100;
+showMe("The percentage increase is: " + (percentage*100) + " %");
+jumpLine();
+
+document.write("=============================================");
+jumpLine();
+showMe("Employee: " + name);
+showMe("Office: " + profession);
+showMe("New Gross Salary: $" + (gross_Salary + gross_Salary*percentage));
+showMe("Tax: $" + tax);
+showMe("New Net salary: $" + ((gross_Salary + gross_Salary*percentage) - tax));
+document.write("=============================================");
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

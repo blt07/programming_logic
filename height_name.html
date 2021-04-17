@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+<script>
+//Crie um programa que entre com os dados de altura e sexo de 5 pessoas. 
+//Imprima na tela quantas pessoas são do sexo masculino e quantas pessoas são do sexo feminino. 
+//Mostre também qual é a maior altura e se essa altura é de um homem ou uma mulher.
+function jumpLine()
+{
+    document.write("<br>" + "<br>");
+}
+
+function showMe(phrase)
+{
+    document.write(phrase);
+    jumpLine();
+}
+
+function readName(cont)
+{
+    var name = prompt(cont + "- What's your gender?");
+    return name;
+}
+
+function readHeight(cont)
+{
+    var height = parseFloat(prompt(cont + "- What's your height"));
+    return height;
+}
+
+var gender = [];
+var height = [];
+var highestHeight = 0;
+var highestGender = "";
+var quant = parseInt(prompt("Type it the quantity of people:"));
+for(aux = 0 ; aux<quant ;aux++)
+{
+    gender[aux] = readName(aux + 1);
+    height[aux] = readHeight(aux +1);
+
+   if (height[aux] > highestHeight)
+    {
+       highestHeight = height[aux];
+       highestGender = gender[aux];    
+    }
+}
+
+showMe("The highest height is: " + highestHeight + " and is from a " + highestGender);
+
+
+
+
+</script>

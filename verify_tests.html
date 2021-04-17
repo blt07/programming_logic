@@ -1,0 +1,79 @@
+<meta charset="UTF-8">
+
+<script>
+
+function jumpLine()
+{
+	document.write("<br>" + "<br>");
+}
+
+function showMe(phrase)
+{
+	document.write(phrase);
+	jumpLine();
+}
+
+function readNote(test)
+{
+
+	switch (test)
+{
+
+	case "first":
+	do{
+	var note = parseFloat(prompt("Type the " + test + " note:"));
+	}while(note < 0 || note > 30);
+	return note;
+	break;
+
+	case "second":
+	do{
+	var note = parseFloat(prompt("Type the " + test + " note:"));
+	}while(note < 0 || note > 35);
+	return note;
+	break;
+
+	case "third":
+	do{
+	var note = parseFloat(prompt("Type the " + test + " note:"));
+	}while(note < 0 || note > 35);
+	return note;
+	break;
+}
+}
+
+function readName()
+{
+	var name = prompt("What's the name of student?");
+	return name;
+}
+
+function calculateNote(note1,note2,note3)
+{
+	var finalGrade = note1 + note2 + note3;
+	return finalGrade; 
+}
+
+function verifyGrade(name,finalGrade)
+{
+	if (finalGrade >= 60)
+	{
+		showMe("Final Grade: " + finalGrade);
+		showMe("Congrats " + name + "! You passed!");
+	}else
+	{
+		showMe("Final Grade: " + finalGrade);
+		showMe("Sorry " + name + "! You didn't pass!");
+		showMe((60-finalGrade) + " points left for you pass!");
+	}
+}
+
+var name = readName();
+var note1 = readNote("first");
+var note2 = readNote("second");
+var note3 = readNote("third");
+
+var finalGrade = calculateNote(note1,note2,note3);
+verifyGrade(name,finalGrade);
+
+</script>

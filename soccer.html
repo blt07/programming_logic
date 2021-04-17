@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+function jumpLine()
+{
+    document.write("<br" + "<br>");
+}
+
+function showMe(phrase)
+{
+    document.write(phrase);
+    jumpLine();
+}
+
+function readNumber(name)
+{
+    var number = parseInt(prompt("How many " + name + " was your team?"));
+    return number;
+}
+
+var wins = readNumber("wins");
+var loses = readNumber("loses");
+var ties = readNumber("ties");
+
+showMe("Your team has: " + ((wins*3)+(ties*1)) + " points");
+</script>

@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+
+<script>
+// Peça ao usuário para digitar vários nomes. 
+//Exiba na tela todos os nomes digitados, 
+//porém de maneira invertida (do último para o primeiro).
+
+function jumpLine()
+{
+    document.write("<br>" + "<br>");
+}
+
+function readName(cont)
+{
+    var namePerson = prompt("Type it the name " + cont + " :");
+    return namePerson;
+}
+
+function showMe(phrase)
+{
+    document.write(phrase);
+    jumpLine();    
+}
+
+var cont = parseInt(prompt("How many names do you want to type?"));
+var namePerson = [];
+showMe("=========================");
+for(aux = 0 ; aux < cont ; aux++)
+{
+    
+    namePerson[aux] = readName((aux + 1));
+    showMe("The number " + (aux+1) + " is " + namePerson[aux] + "!");
+}
+showMe("=========================");
+namePerson.reverse();
+for(aux = 0 ; aux < cont ; aux++)
+{
+    showMe("The number " + (aux+1) + " is " + namePerson[aux] + "!");
+}
+showMe("=========================");
+
+</script>

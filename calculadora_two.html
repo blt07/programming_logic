@@ -1,0 +1,98 @@
+<meta charset="UTF-8">
+<h1>Calculadora Beta</h1>
+<script>
+
+    function jumpLine() {
+        document.write("<br>" + "<br>");
+    }
+
+    function showMe(phrase) {
+        document.write(phrase);
+        jumpLine();
+    }
+
+    function readNumber() {
+        var number;
+        do {
+            number = parseInt(prompt("Digite um número:"));
+        } while (number + 0 != number);
+        return number;
+    }
+
+    function readSign() {
+        var sign;
+        sign = prompt("Digite a operação (+, *, -, /):");
+        return sign;
+    }
+
+    function addNumber(number1, number2) {
+        var som;
+        som = number1 + number2;
+        return som;
+    }
+
+    function subtractNumber(number1, number2) {
+        var subtract;
+        subtract = number1 - number2;
+        return subtract;
+    }
+
+    function multiplyNumber(number1, number2) {
+        var multiply;
+        multiply = number1 * number2;
+        return multiply;
+    }
+
+    function divisionNumber(number1, number2) {
+        var division;
+        division = number1 / number2;
+        return division;
+    }
+
+
+    var operate;
+    var number1;
+    var number2;
+    var result;
+    var calculateAgain;
+
+
+    do {
+        number1 = readNumber();
+        do {
+            operate = readSign();
+        } while (operate != "+" && operate != "-" && operate != "*" && operate != "/");
+
+        number2 = readNumber();
+
+        switch (operate) {
+
+            case "+":
+                result = addNumber(number1, number2);
+                showMe(number1 + " + " + number2 + " = " + result);
+                console.log(number1);
+                console.log(number2)
+                break;
+
+            case "-":
+                result = subtractNumber(number1, number2);
+                showMe(number1 + " - " + number2 + " = " + result);
+                break;
+
+            case "*":
+                result = multiplyNumber(number1, number2);
+                showMe(number1 + " * " + number2 + " = " + result);
+                break;
+
+            case "/":
+                result = divisionNumber(number1, number2);
+                showMe(number1 + " / " + number2 + " = " + result);
+                break;
+        }
+
+
+        calculateAgain = confirm("Deseja fazer outra conta? Clique em Ok");
+    } while (calculateAgain == true);
+
+
+</script>

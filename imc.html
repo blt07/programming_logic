@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+function jumpLine()
+{
+    document.write("<br" + "<br");
+}
+
+function showMe(phrases)
+{
+    document.write(phrases);
+    jumpLine();
+}
+
+function read_Number(ask_Card)
+{
+    var number;
+    number = parseFloat(prompt(ask_Card));
+    return number;
+}
+
+function imc_Calculate(weight,height)
+{
+    var imc
+    imc = weight/(height*height);
+    return imc;
+}
+
+function check_Imc(imc)
+{
+    if (imc < 18.5)
+    {
+        showMe("You are under weigth, your IMC is " + Math.round(imc));
+    }if (imc <= 24.9)
+    {
+        showMe("You are normal weigth, your IMC is " + Math.round(imc));
+    }if (imc <= 29.9)
+    {
+        showMe("You are overweigth, your IMC is " + Math.round(imc));
+    }if (imc <= 34.9)
+    {
+        showMe("You are with grade one obesity, your IMC is " + Math.round(imc));
+    }if(imc <= 39.9){
+        showMe("You are with grade two obesity, your IMC is " + Math.round(imc));
+    }else{
+        showMe("You are with grade three obesity, your IMC is " + Math.round(imc));
+    }
+}
+
+// This program help you to calculate your IMC.
+    var weight;
+    var height;
+    var imc;
+
+    weight = read_Number("What's your weight?");
+    height = read_Number("What's your height?");
+
+    imc = imc_Calculate(weight,height);
+    check_Imc(imc);
+    
+
+    
+
+</script>

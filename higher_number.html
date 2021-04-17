@@ -1,0 +1,38 @@
+<meta charset = "UTF-8">
+
+<script>
+//3 – Peça ao usuário para digitar 5 números em uma caixa de texto. 
+//Verifique qual é o maior número e exiba-o.
+
+function jumpLine()
+{
+    document.write("<br>" + "<br>");
+}
+
+function showMe(phrase)
+{
+    document.write(phrase);
+}
+
+function readNumber()
+{
+    var number = parseFloat(prompt("Type it a number:"));
+    return number;
+}
+
+var number = [];
+var higher_Number = 0;
+for (aux = 0 ; aux<5 ; aux++)
+{
+    number[aux] = readNumber();
+
+    if(number[aux] > higher_Number)
+    {
+        higher_Number = number[aux];
+    }
+}
+
+showMe("The higher number is: " + higher_Number);
+
+
+</script>

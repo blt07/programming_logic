@@ -1,0 +1,43 @@
+<meta charset:"UTF-8">
+
+
+
+<script>
+
+function showMe(phrase)
+{
+	document.write(phrase);
+	document.write("<br>");
+}
+
+
+
+	var number;
+	var number2;
+	var variable;
+	var result;
+	number = parseInt(prompt("Digite o primeiro número:"));
+	number2 = parseInt(prompt("Digite o segundo número:"));
+	variable = prompt("Digite a operação:");
+	if (variable == "+")
+{
+	result = number + number2;
+	showMe("A soma é " + result);
+}	
+	if (variable == "-")
+{
+	result = number - number2;
+	showMe("A subtração é " + result);
+}
+	if (variable == "*")
+{
+	result = number * number2;
+	showMe("A multiplicação é " + result);
+}
+	if (variable == "/")
+{
+	result = number/number2;
+	showMe("A divisão é " + result);
+}	
+
+</script>

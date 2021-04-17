@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function jumpLine()
+    {
+        document.write("<br"+"<br>");
+    }
+    function showMe(phrases)
+    {
+        document.write(phrases);
+        jumpLine();
+    }
+
+    var current_Year;
+    var portuguese_Arrival = 1500;
+    var time_Born = 28;
+    var count_Borns;
+
+  
+    current_Year = parseInt(prompt("What's the current year?"));
+    
+        
+    count_Borns = ((current_Year - portuguese_Arrival)/time_Born);
+
+    showMe("We has " + Math.round(count_Borns) + " generations!");
+
+</script>

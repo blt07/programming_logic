@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+// Calcule a média de diversas notas digitadas pelo usuário.
+
+function jumpLine()
+{
+    document.write("<br" + "<br>");
+}
+
+function showMe(phrase)
+{
+    document.write(phrase);
+    jumpLine();
+}
+
+function readNumber(cont)
+{
+do{
+    var number = parseInt(prompt("Digite a nota " + cont));
+}while(number < 0 || number > 10 || number != number +0);
+
+return number;
+
+}
+
+do{
+    var cont = parseInt(prompt("How many test do you want to calculate?"));
+    var sum = 0;
+}while (cont != cont + 0 );
+
+for (aux = 1; aux<=cont ; aux++ )
+{
+    var note = readNumber(aux);
+    sum = sum + note;
+}
+
+var media = sum/cont;
+showMe("The note's average is " + media);
+
+</script>

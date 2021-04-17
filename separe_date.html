@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+
+function jumpLine()
+{
+    document.write("<br>" + "<br>");
+
+}
+
+function readDate()
+{
+    type_Date = prompt("Digite uma data:");
+    return type_Date;
+}
+
+function showMe(phrase)
+{
+    document.write(phrase);
+    jumpLine();
+}
+
+var type_Date = "07/02/1994";
+
+showMe("A data informada foi: " + type_Date);
+showMe("O dia é: " + (type_Date[0] + type_Date[1] ));
+showMe("O mês é: " + (type_Date[3] + type_Date[4] ));
+showMe("O ano é: " + (type_Date[6] + type_Date[7] + type_Date[8] + type_Date[9] ));
+
+
+
+    
+
+</script>

@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+// Peça ao usuário para digitar várias idades. Exiba quantas pessoas são maior de idade (18 anos) e quantas são menores.
+function jumpLine()
+{
+    document.write("<br>" + "<br>");
+}
+
+function showMe(phrase)
+{
+    document.write(phrase);
+    jumpLine();
+}
+
+function readNumber(name)
+{
+    var number = parseInt(prompt(name));
+    return number;
+}
+
+var cont = readNumber("How many ages do you want to type?");
+var maiorityCount = 0;
+var minorityCount = 0;
+for (aux = 1; aux <= cont; aux++)
+{
+    var age = readNumber("Type the age" + aux);
+    if (age >= 18){
+        maiorityCount++;
+    }else{
+        minorityCount++;
+    }
+}
+
+showMe(maiorityCount + " people has a maiority");
+jumpLine();
+showMe(minorityCount + " people has a minority");
+
+
+</script>

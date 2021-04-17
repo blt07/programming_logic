@@ -1,0 +1,36 @@
+<meta charset:"UTF-8">
+
+<h1>Gas or Alchool Calculator</h1>
+
+<script>
+
+function showMe(phrase)
+{
+	document.write(phrase);
+	document.write("<br>");
+}
+
+	var tank;
+	var gasPrice;
+	var alchoolPrice;
+	var gasConsumption;
+	var alchoolConsumption;
+
+	tank = parseInt(prompt("What's your fuel tank volume?"));
+	
+	gasPrice = parseInt(prompt("What's the price of gas?"));
+	alchoolPrice = parseInt(prompt("What's the price of alchool?"));
+	
+	gasConsumption = parseInt(prompt("What's your consumption with gas?")); 	
+	alchoolConsumption = parseInt(prompt("What's your consumption with alchool?"));
+
+	if (alchoolPrice/gasPrice > 0.7)
+{
+	showMe("It's much better to use gas");
+}else
+{
+	showMe("It's much better to use alchool");
+}
+
+	
+</script>

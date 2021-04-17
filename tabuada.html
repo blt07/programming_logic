@@ -1,0 +1,24 @@
+<meta charset:"UTF-8">
+
+<script>
+
+function showMe(phrase)
+{
+	document.write(phrase);
+	document.write("<br>");
+	document.write("<br>");
+}
+
+	var tabuada;
+	var cont = 0;
+	tabuada = parseInt(prompt("Digite o número que deseja saber a tabuada:"));
+	
+do{
+	
+	showMe( tabuada + " * " + cont + " é igual a  " + (tabuada*cont));
+	cont = cont +1
+
+}while(cont<=10)
+
+
+</script>

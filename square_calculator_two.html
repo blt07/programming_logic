@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+
+<script>
+
+function jumpLine()
+{
+	document.write("<br>");
+}
+
+function showMe(phrase)
+{
+	document.write(phrase);
+	jumpLine();
+}
+
+function readNumber(variable)
+{
+	do{
+
+		var number = parseInt(prompt("What's the " + variable + " :"));
+	
+	}while(number + 0 != number);
+	return number;
+
+}
+
+function calculateArea(width,height)
+{
+	var area = width*height;
+	return area;
+}
+
+function calculatePerimeter(width,height)
+{
+	var perimeter = (2*width) + (2*height);
+	return perimeter;
+}
+
+function calculateDiagonal(width,height)
+{
+	var diagonal = Math.sqrt((width*width + height*height));
+	return diagonal;
+}
+
+var width = readNumber("width");
+var height = readNumber("height");
+
+showMe("The area is: " + calculateArea(width,height));
+showMe("The perimeter is: " + calculatePerimeter(width,height));
+showMe("The diagonal is: " + calculateDiagonal(width,height));
+
+
+
+
+</script>

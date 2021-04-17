@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function jumpLine()
+    {
+        document.write("<br"+"<br>");
+    }
+
+    function showMe(phrase)
+    {
+        document.write(phrase);
+        jumpLine();
+    }
+
+    var sister_Age;
+    var your_Age;
+    var difference_Age;
+    var turn_Positive = -1;
+
+    sister_Age = parseInt(prompt("What's age of your brother or sister?"));
+    your_Age = parseInt(prompt("What's your age?"));
+
+    difference_Age = sister_Age - your_Age;
+        
+    if(difference_Age > 0)
+    {
+        showMe("Nossa diferença de idade é: " + difference_Age);
+    }else{
+        turn_Positive = difference_Age * (-1);
+        showMe("Nossa diferença de idade é: " + turn_Positive);
+    }
+
+
+
+</script>
