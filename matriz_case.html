@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+
+<script>
+
+var number;
+var matriz = [[],[]];
+
+number = parseInt(prompt("Digite um número inteiro:"));
+
+document.write("O número escolhido foi: " + number);
+
+document.write("<br>");
+document.write("====================================================");
+document.write("<br>");
+
+for(var linha = 0 ; linha < number ; linha++)
+{
+    document.write("<br>");
+
+    for(var coluna = 0 ; coluna < number ; coluna++)
+    {
+        matriz [[linha,coluna],[linha,coluna]] = parseInt(prompt("Digite um número para alocar" + "[" + linha + "," + coluna + "] na matriz!"));
+        document.write(matriz[[linha,coluna],[linha,coluna]]); 
+    }
+
+}
+document.write("<br>");
+document.write("<br>");
+document.write("====================================================");
+document.write("<br>");
+for(var linha = 0 ; linha < number ; linha++)
+{
+
+    for(var coluna = 0 ; coluna < number ; coluna++)
+    {
+        if(linha == coluna)
+        {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("Esse número: " + matriz [[linha,coluna],[linha,coluna]] + " faz parte da diagonal!");
+        }
+    }
+
+}
+
+document.write("<br>");
+document.write("<br>");
+document.write("====================================================");
+document.write("<br>");
+
+var cont = 0;
+for(var linha = 0 ; linha < number ; linha++)
+{
+
+    for(var coluna = 0 ; coluna < number ; coluna++)
+    {
+        if(matriz [[linha,coluna],[linha,coluna]] < 0)
+        {
+            cont++;
+        }
+    }
+
+}
+document.write("<br>");
+document.write("<br>");
+document.write("Existem " + cont + " números negativos nessa matriz!");
+document.write("<br>");
+document.write("<br>");
+document.write("====================================================");
+document.write("<br>");
+
+</script>

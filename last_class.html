@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+
+Digite sua tentativa <input/> <br> <br>
+<button>Verify secret</button>
+
+<script>
+function createArray()
+{
+    var arrays = [];
+    tamanho = Math.round(Math.random()*10);
+    for(var aux = 0 ; aux < tamanho ; aux++)
+    {
+        arrays[aux] = Math.round(Math.random()*10);
+    }
+
+    return arrays;
+}
+
+function verify()
+{
+    var arrays = [];
+    arrays = createArray();
+    aux_Wrong = false;
+    for(var aux = 0; aux < arrays.length ; aux++)
+    {
+        if(number.value == arrays[aux])
+        {
+            alert("You're correct!");
+            aux_Wrong = true;
+            break;
+        }
+    }
+
+    if(aux_Wrong == false)
+    {
+        alert("Your worng!");
+    }
+    number.value = "";
+    number.focus();
+
+
+}
+
+
+
+var number = document.querySelector("input");
+var button = document.querySelector("button");
+button.onclick = verify;
+
+</script>

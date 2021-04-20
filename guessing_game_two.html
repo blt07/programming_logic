@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+Digite um número: <input/> <br><br>
+
+
+<button>Compare com meu segredo</button>
+
+<script>
+
+    function verify()
+    {
+        if(readInput.value == secret)
+    {
+            alert("You're correct");
+            readInput.value = "";
+            readInput.focus();
+    }else{
+            alert("You wrong!");
+            readInput.value = "";
+            readInput.focus();
+    }
+    }
+
+    var readInput = document.querySelector("input");
+    var secret = Math.random(Math.round()*10);
+    var button = document.querySelector("button");
+    button.onclick = verify;
+
+
+</script>

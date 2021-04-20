@@ -1,0 +1,27 @@
+function verify()
+{
+    var arrays = createArray();
+    aux_Wrong = false;
+    for(var aux = 0; aux <= arrays.length ; aux++)
+    {
+        if(number.value == arrays[aux])
+        {
+            alert("You're correct " + number.value + " " + arrays[aux] );
+            aux_Wrong = true;
+            break;
+        }
+    }
+
+    if(aux_Wrong == false)
+    {
+        alert("Your worng!" + number.value + " " + arrays[aux]);
+    }
+    number.value = "";
+    number.focus();
+}
+
+
+
+var number = document.querySelector("input");
+var button = document.querySelector("button");
+button.onclick = verify;
